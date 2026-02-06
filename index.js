@@ -30,7 +30,7 @@ console.log("🔑 GROQ_API_KEY loaded:", !!process.env.GROQ_API_KEY);
 
 app.get("/",(res,req)=>{
   console.log("welcome");
-  res.send("running...");
+  res.json("running...");
 })
 
 app.listen(PORT, () => {
