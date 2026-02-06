@@ -22,10 +22,16 @@ app.use(express.json());
 // ===== Routes =====
 app.use("/api/ai", aiRoutes);
 
+
 // ===== Start server =====
 const PORT = process.env.PORT || 5000;
 
 console.log("🔑 GROQ_API_KEY loaded:", !!process.env.GROQ_API_KEY);
+
+app.get("/",(res,req)=>{
+  console.log("welcome");
+  res.send("running...");
+})
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
