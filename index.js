@@ -28,10 +28,9 @@ const PORT = process.env.PORT || 5000;
 
 console.log("🔑 GROQ_API_KEY loaded:", !!process.env.GROQ_API_KEY);
 
-app.get("/",(res,req)=>{
+app.get("/",(req,res)=>{
   console.log("welcome");
-  
-  res.json({msg:"runig"});
+  res.send("runnig");
 })
 
 app.listen(PORT, () => {
